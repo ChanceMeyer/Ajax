@@ -3,11 +3,22 @@ namespace Ajax.Controllers {
         public product;
 
         constructor(TaxService) {
-            this.product = [{
+            this.product = [
+                {
                 name: `Milk`,
                 price: 1.99,
                 tax: TaxService.CalculateTax(1.99)
-            }
+                },
+                {
+                    name: `Pasta`,
+                    price: .99,
+                    tax: TaxService.CalculateTax(.99)
+                },
+                {
+                    name: `Steak`,
+                    price: 6.99,
+                    tax: TaxService.CalculateTax(6.99)
+                }
             ]
         }
 
